@@ -1,57 +1,52 @@
+/* src/app/components/Navbar.css */
+
 .navbar {
-    background-color: #333;
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-  }
-  
-  .div01 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    max-width: 1200px;
-  }
-  
-  .div02 {
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-  }
-  
-  .div03 {
-    display: flex;
-  }
-  
-  .ul01 {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .ul01 li {
-    margin: 0 1rem;
-  }
-  
-  .ul01 li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-  }
-  
-  .ul01 li a:hover {
-    text-decoration: underline;
-  }
-  
-  .inicio, .members, .info {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  .inicio:hover, .members:hover, .info:hover {
-      background-color: #ccc;
-  }
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.div02 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.div03 {
+  display: flex;
+}
+
+.ul01 {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.ul01 li {
+  margin: 0;
+}
+
+.ul01 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.menu button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
