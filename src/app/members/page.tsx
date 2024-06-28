@@ -3,4 +3,3 @@ export default function members() {
     <h1>Membros da da PIBTV</h1>
     );
   }
-  
