@@ -15,7 +15,7 @@ export default function NavBar() {
               <Link href="/members" className="members">Membros</Link>
             </li>
             <li>
-              <Link href="/Info" className="info">Informações</Link>
+              <Link href="/members/add" className="members_add">Adicionar Membro</Link>
             </li>
           </ul>
         </div>
