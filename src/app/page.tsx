@@ -17,7 +17,7 @@ const Home: React.FC = () => {
           <br />
           <br /> 
           <p>Nossas redes sociais</p>
-          <a href="#instagram">📸</a>
+          <a href="https://www.instagram.com/pibteotoniovilela/">📸</a>
           <a href="#youtube">📺</a>
         </div>
       </section>

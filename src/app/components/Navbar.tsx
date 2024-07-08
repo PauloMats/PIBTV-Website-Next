@@ -12,20 +12,20 @@ export default function NavBar() {
             <li>
               <Link href="/" className="inicio">Início</Link>
             </li>
-            {/* <li>
-              <Link href="#visit" className="visit">Visite-nos</Link>
+             <li>
+              <Link href="/local" className="visit">Visite-nos</Link>
             </li>
             <li>
-              <Link href="#media-library" className="mediaLibrary">Mídia PIBTV</Link>
+              <Link href="/midiapibtv" className="mediaLibrary">Mídia PIBTV</Link>
             </li>
             <li>
-              <Link href="#about" className="about">Sobre nós</Link>
+              <Link href="/sobrenos" className="about">Sobre nós</Link>
             </li>
             <li>
-              <Link href="#events" className="events">Eventos e Avisos</Link>
-            </li> */}
+              <Link href="/eventos" className="events">Eventos e Avisos</Link>
+            </li> 
             <li>
-              <Link href="/members" className="members">Membros</Link>
+              <Link href="/celulas" className="members">Células</Link>
             </li>
             <li>
               <Link href="/members/add" className="members_add">Adicionar Membro</Link>

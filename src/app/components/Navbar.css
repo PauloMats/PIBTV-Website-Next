@@ -1,10 +1,9 @@
 /* src/app/components/Navbar.css */
 
 .navbar {
-  width: 100%;
-  background-color: #f8f8f8;
+  background: linear-gradient(to bottom, #db020293, #620000);
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(63, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -14,19 +13,23 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: aliceblue;
   width: 100%;
 }
 
 .div02 {
-  font-size: 24px;
+  font-size: 18px;
   font-weight: bold;
+  
 }
 
 .div03 {
   display: flex;
+ 
 }
 
 .ul01 {
+
   list-style: none;
   display: flex;
   gap: 15px;
@@ -40,13 +43,15 @@
 
 .ul01 a {
   text-decoration: none;
-  color: #333;
-  font-size: 16px;
+  color: aliceblue;
+  font-size: 14px;
 }
 
 .menu button {
+  display: none;
   background: none;
   border: none;
   font-size: 24px;
   cursor: pointer;
+  margin-left: 2%;
 }
