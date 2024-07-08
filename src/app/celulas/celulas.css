@@ -1,0 +1,55 @@
+
+
+.container {
+    max-width: 100%;
+    overflow-y: auto; /* Permite rolagem vertical */
+    padding: 20px;
+    background-color: #f0f0f0; /* Fundo cinza claro para toda a página */
+    min-height: 100vh; /* Garante que o contêiner ocupe a altura total da tela */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Cor do texto do título */
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column; /* As imagens ficam empilhadas verticalmente */
+    align-items: center;
+}
+
+.image-container {
+    background-color: #ccc; /* Fundo cinza atrás das fotos */
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+}
+
+.image-container:hover {
+    transform: scale(1.05); /* Aumenta levemente o tamanho ao passar o mouse */
+}
+
+.image {
+    width: 100%;
+    max-width: 600px; /* Define um tamanho máximo para as imagens */
+    height: auto;
+    border-radius: 10px; /* Bordas arredondadas nas imagens */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .image {
+        max-width: 100%; /* Imagens ocupam 100% da largura disponível em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
