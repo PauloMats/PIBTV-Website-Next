@@ -1,36 +1,27 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### Web Site Frontend
 
-## Getting Started
+Este projeto é o frontend do site da PIBTV, ele é responsável por exibir as informações do site e permitir a interação do usuário com o site. Ainda não está pronto, mas já é possível visualizar o site em funcionamento.
 
-First, run the development server:
+Acesse o site em: [https://pibtv-website-frontend.vercel.app/](https://pibtv-website-frontend.vercel.app/)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Tecnologias Utilizadas
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- React
+- Next.js
+- TypeScript
+- Styled Components
+- Jest
+- React Testing Library
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Ainda serão implementadas as seguintes funcionalidades:
+- [ ] Página de contato
+- [ ] Responsividade para dispositivos móveis
+- [ ] Página de avisos
+- [ ] Página de eventos
+- [ ] Página de galeria de fotos
+- [ ] Página de galeria de vídeos
+- [ ] Página de ministérios
+- [ ] Página de notícias
+- [ ] Página de quem somos
+- [ ] Página de sermões
+- [ ] Página de testemunhos
