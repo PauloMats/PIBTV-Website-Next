@@ -1,10 +1,11 @@
 import React from 'react';
+import './sobrenos.css';
 
 const InfoPage: React.FC = () => {
     return (
-        <div>
-            <h1>Info Page</h1>
-            <p>This is the info page content.</p>
+        <div className='container'>
+            <h1>Mais sobre a PIBTV</h1>
+            <p>A Primeira Igreja Batista em Teotônio Vilela foi fundada em...</p>
         </div>
     );
 };

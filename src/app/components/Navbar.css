@@ -1,5 +1,3 @@
-/* src/app/components/Navbar.css */
-
 .navbar {
   background: linear-gradient(to bottom, #db020293, #620000);
   padding: 20px;
@@ -20,16 +18,13 @@
 .div02 {
   font-size: 18px;
   font-weight: bold;
-  
 }
 
 .div03 {
   display: flex;
- 
 }
 
 .ul01 {
-
   list-style: none;
   display: flex;
   gap: 15px;
@@ -54,4 +49,31 @@
   font-size: 24px;
   cursor: pointer;
   margin-left: 2%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .div03 {
+    display: none;
+  }
+
+  .div03.open {
+    display: block;
+  }
+
+  .ul01 {
+    flex-direction: column;
+    gap: 10px;
+    background: #620000;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .menu button {
+    display: block;
+  }
 }

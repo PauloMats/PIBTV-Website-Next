@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, ChangeEvent, FormEvent } from 'react';
-import styles from '../../styles/AddMember.module.css';
+import styles from './AddMember.module.css';
 
 interface FormData {
   name: string;
@@ -30,7 +30,7 @@ const AddMember: React.FC = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    // Aqui você faria a submissão dos dados para o backend
+    // Aqui será feita a submissão dos dados para o backend
     console.log(formData);
   };
 

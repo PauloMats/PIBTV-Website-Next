@@ -1,18 +1,26 @@
-// src/app/components/navbar.tsx
+"use client";
+
 import Link from 'next/link';
+import { useState } from 'react';
 import './Navbar.css';
 
 export default function NavBar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav className="navbar">
       <div className="div01">
         <div className="div02">Primeira Igreja Batista em Teotônio Vilela</div>
-        <div className="div03">
+        <div className={`div03 ${menuOpen ? 'open' : ''}`}>
           <ul className="ul01">
             <li>
               <Link href="/" className="inicio">Início</Link>
             </li>
-             <li>
+            <li>
               <Link href="/local" className="visit">Visite-nos</Link>
             </li>
             <li>
@@ -33,9 +41,9 @@ export default function NavBar() {
           </ul>
         </div>
         <div className="menu">
-          <button>☰</button>
+          <button onClick={toggleMenu}>☰</button>
         </div>
       </div>
     </nav>
-  )
+  );
 }

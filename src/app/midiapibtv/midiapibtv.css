@@ -1,0 +1,42 @@
+.container {
+    max-width: 100%;
+    overflow-y: auto; /* Permite rolagem vertical */
+    padding: 20px;
+    background-color: #f0f0f0; /* Fundo cinza claro para toda a página */
+    min-height: 100vh; /* Garante que o contêiner ocupe a altura total da tela */
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+h3 {
+    margin-bottom: 10px;
+    font-family: sans-serif;
+    margin-left: 10%;
+}
+
+.page_midiapibtv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page_midiapibtv h1, .page_midiapibtv h2 {
+    margin-bottom: 20px;
+}
+
+.image-container {
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}

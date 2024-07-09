@@ -1,8 +1,12 @@
 /* src/app/globals.css */
 
-body {
+body, html {
+  background-image: url('../assets/Arte\ fundo\ site.png'); /* Altere o caminho para a imagem desejada */
+  background-size: 100%;
   margin: 0;
   padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
