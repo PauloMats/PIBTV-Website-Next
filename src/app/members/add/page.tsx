@@ -1,106 +1,59 @@
-"use client";
+import React from 'react';
+import { useForm } from 'react-hook-form';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { z } from 'zod';
 
-import { useState, ChangeEvent, FormEvent } from 'react';
-import styles from './AddMember.module.css';
+// Definindo o esquema de validação com Zod
+const schema = z.object({
+  name: z.string().min(1, 'O nome é obrigatório'),
+  birthDate: z.string().min(1, 'A data de nascimento é obrigatória'),
+  conversionDate: z.string().min(1, 'A data de conversão é obrigatória'),
+  baptismDate: z.string().min(1, 'A data de batismo é obrigatória'),
+  rvv: z.boolean().optional(),
+});
 
-interface FormData {
-  name: string;
-  birthDate: string;
-  conversionDate: string;
-  baptismDate: string;
-  rvv: boolean;
-}
-
-const AddMember: React.FC = () => {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    birthDate: '',
-    conversionDate: '',
-    baptismDate: '',
-    rvv: false,
+export default function MyForm() {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(schema),
   });
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    const { name, value, type, checked } = e.target;
-    setFormData({
-      ...formData,
-      [name]: type === 'checkbox' ? checked : value,
-    });
-  };
-
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    // Aqui será feita a submissão dos dados para o backend
-    console.log(formData);
+  const onSubmit = (data) => {
+    console.log(data);
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.title}>Adicionar Novo Membro</h1>
-      <form onSubmit={handleSubmit} className={styles.form}>
-        <div className={styles.formGroup}>
-          <label htmlFor="name" className={styles.label}>Nome:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className={styles.input}
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="birthDate" className={styles.label}>Data de Nascimento:</label>
-          <input
-            type="date"
-            id="birthDate"
-            name="birthDate"
-            className={styles.dateInput}
-            value={formData.birthDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="conversionDate" className={styles.label}>Data de Conversão:</label>
-          <input
-            type="date"
-            id="conversionDate"
-            name="conversionDate"
-            className={styles.dateInput}
-            value={formData.conversionDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="baptismDate" className={styles.label}>Data do Batismo:</label>
-          <input
-            type="date"
-            id="baptismDate"
-            name="baptismDate"
-            className={styles.dateInput}
-            value={formData.baptismDate}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="rvv" className={styles.label}>Fez o RVV:</label>
-          <input
-            type="checkbox"
-            id="rvv"
-            name="rvv"
-            className={styles.checkbox}
-            checked={formData.rvv}
-            onChange={handleChange}
-          />
-        </div>
-        <button type="submit" className={styles.submitButton}>Adicionar Membro</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div>
+        <label>Nome:</label>
+        <input {...register('name')} />
+        {errors.name && <span>{errors.name.message}</span>}
+      </div>
+      <div>
+        <label>Data de Nascimento:</label>
+        <input type="date" {...register('birthDate')} />
+        {errors.birthDate && <span>{errors.birthDate.message}</span>}
+      </div>
+      <div>
+        <label>Data de Conversão:</label>
+        <input type="date" {...register('conversionDate')} />
+        {errors.conversionDate && <span>{errors.conversionDate.message}</span>}
+      </div>
+      <div>
+        <label>Data de Batismo:</label>
+        <input type="date" {...register('baptismDate')} />
+        {errors.baptismDate && <span>{errors.baptismDate.message}</span>}
+      </div>
+      <div>
+        <label>
+          <input type="checkbox" {...register('rvv')} />
+          Recebeu VVV (Verdade, Vida, Vitória)
+        </label>
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
   );
-};
-
-export default AddMember;
+}
