@@ -15,11 +15,11 @@ Acesse o site em: [https://pibtv-website-frontend.vercel.app/](https://pibtv-web
 
 ### Ainda serão implementadas as seguintes funcionalidades:
 - [ ] Página de contato
-- [ ] Responsividade para dispositivos móveis
+- [x] Responsividade para dispositivos móveis
 - [ ] Página de avisos
-- [ ] Página de eventos
-- [ ] Página de galeria de fotos
-- [ ] Página de galeria de vídeos
+- [x] Página de eventos
+- [x] Página de galeria de fotos
+- [x] Página de galeria de vídeos
 - [ ] Página de ministérios
 - [ ] Página de notícias
 - [ ] Página de quem somos
