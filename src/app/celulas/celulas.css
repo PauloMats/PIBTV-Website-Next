@@ -4,9 +4,20 @@
     max-width: 100%;
     overflow-y: auto; /* Permite rolagem vertical */
     padding: 20px;
-    background-color: #f0f0f0; /* Fundo cinza claro para toda a página */
     min-height: 100vh; /* Garante que o contêiner ocupe a altura total da tela */
 }
+p {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Cor do texto */
+}
+.image-gallery-1, .image-gallery-2 {   
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas */
+    gap: 20px; /* Espaçamento entre as imagens */
+    justify-items: center; /* Centraliza as imagens dentro das células */
+}
+
 
 h1 {
     text-align: center;
@@ -22,7 +33,6 @@ h1 {
 }
 
 .image-container {
-    background-color: #ccc; /* Fundo cinza atrás das fotos */
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -46,10 +56,26 @@ h1 {
     .image {
         max-width: 100%; /* Imagens ocupam 100% da largura disponível em telas pequenas */
     }
+    .image-gallery-1, .image-gallery-2 {   
+        margin-right: 2%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        gap: 20px; /* Espaçamento entre as imagens */
+    }
+    
 }
 
 @media (max-width: 480px) {
     h1 {
         font-size: 1.5rem;
     }
+    .image-gallery-1, .image-gallery-2 {   
+        margin-right: 2%;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        gap: 20px; /* Espaçamento entre as imagens */
+    }
+    
 }

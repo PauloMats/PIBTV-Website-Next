@@ -1,7 +1,7 @@
 /* src/app/globals.css */
 
 body, html {
-  background-image: url('../assets/Arte\ fundo\ site.png'); /* Altere o caminho para a imagem desejada */
+  background-color: rgb(255, 255, 255);
   background-size: 100%;
   margin: 0;
   padding: 0;
@@ -9,4 +9,48 @@ body, html {
   height: 100%;
   font-family: 'Arial', sans-serif;
   box-sizing: border-box;
+}
+
+.backgroundPage {
+  background-color: #f4f4f4;
+}
+
+.banner {
+  text-align: center;
+  padding: 50px;
+  background-color: #282c34;
+  color: white;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: #ffffff;
+}
+
+.serviceItem {
+  text-align: center;
+  max-width: 300px;
+}
+
+.serviceItem i {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.serviceItem h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.serviceItem p {
+  font-size: 16px;
+  color: #555;
 }
