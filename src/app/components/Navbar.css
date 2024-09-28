@@ -1,6 +1,7 @@
+/* Navbar.css */
 .navbar {
-  background: linear-gradient(to bottom, #db020293, #620000);
-  padding: 20px;
+  background: white;
+  padding: 10px 20px;
   box-shadow: 0 2px 4px rgba(63, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
@@ -11,13 +12,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: aliceblue;
   width: 100%;
 }
 
 .div02 {
-  font-size: 18px;
-  font-weight: bold;
+  max-width: 100%;
+}
+
+.navbar-logo {
+  margin-left: 10%;
+  width: auto; /* Ajuste automático */
+  height: 50px; /* Altura menor para um design mais compacto */
 }
 
 .div03 {
@@ -27,7 +32,7 @@
 .ul01 {
   list-style: none;
   display: flex;
-  gap: 15px;
+  gap: 20px;
   margin: 0;
   padding: 0;
 }
@@ -36,10 +41,16 @@
   margin: 0;
 }
 
-.ul01 a {
+.nav-link {
   text-decoration: none;
-  color: aliceblue;
-  font-size: 14px;
+  color: black; /* Cor preta para os links */
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #620000; /* Cor de destaque ao passar o mouse */
 }
 
 .menu button {
@@ -51,7 +62,7 @@
   margin-left: 2%;
 }
 
-/* Responsividade */
+/* Responsividade para pequenas telas */
 @media (max-width: 768px) {
   .div03 {
     display: none;
@@ -71,6 +82,10 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .nav-link {
+    color: white; /* Alteração para garantir contraste no menu aberto */
   }
 
   .menu button {

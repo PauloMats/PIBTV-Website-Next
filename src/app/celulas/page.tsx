@@ -1,8 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import image1 from '../../assets/celula encontro comunhao.png';
-import image2 from '../../assets/celula prototipo encontro.png';
-import image3 from '../../assets/Edificação Celulas.png';
 import image4 from '../../assets/img cel huios 1.jpg';
 import image5 from '../../assets/img cel huios 2.jpg';
 import image6 from '../../assets/img cel huios 3.jpg';
