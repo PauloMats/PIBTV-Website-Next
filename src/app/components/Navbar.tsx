@@ -51,9 +51,6 @@ export default function NavBar() {
             <li>
               <Link href="/celulas" className="nav-link" onClick={closeMenu}>Células</Link>
             </li>
-            <li>
-              <Link href="/members/add" className="nav-link" onClick={closeMenu}>Adicionar Membro</Link>
-            </li>
           </ul>
         </div>
         <div className="menu">

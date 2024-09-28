@@ -20,7 +20,7 @@
 }
 
 .navbar-logo {
-  margin-left: 10%;
+  margin-left: 8%;
   width: auto; /* Ajuste automático */
   height: 50px; /* Altura menor para um design mais compacto */
 }
@@ -45,7 +45,8 @@
   text-decoration: none;
   color: black; /* Cor preta para os links */
   font-size: 16px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte moderna */
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif; /* Fonte moderna */
   transition: color 0.3s;
 }
 
@@ -88,6 +89,9 @@
     color: white; /* Alteração para garantir contraste no menu aberto */
   }
 
+  .navbar-logo {
+    margin-left: 0px;
+  }
   .menu button {
     display: block;
   }
