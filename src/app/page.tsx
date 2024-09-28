@@ -1,7 +1,11 @@
+//page.tsx
+
 "use client";
 import React from 'react';
 import styles from './Home.module.css';
 import './globals.css';
+import Image from 'next/image';
+import fotoCultoDomingo from '../assets/Foto_culto_domingo.png';
 
 
 const Home: React.FC = () => {
@@ -9,6 +13,14 @@ const Home: React.FC = () => {
     <>    
     <div className={styles.backgroundPage}>
       <section className={styles.banner}>
+      <div style={{ position: 'relative', width: '100%', height: '300px' }}>
+  <Image
+    src={fotoCultoDomingo}
+    alt="Foto do culto de domingo"
+    layout="fill"
+    objectFit="cover"
+  />
+</div>
         <h1>Seja Bem Vindo(a)!
           <br /> <br />
           <span>Primeira Igreja Batista em Teotônio Vilela</span>
