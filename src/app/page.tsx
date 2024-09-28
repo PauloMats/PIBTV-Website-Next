@@ -5,7 +5,7 @@ import React from 'react';
 import styles from './Home.module.css';
 import './globals.css';
 import Image from 'next/image';
-import fotoCultoDomingo from '../assets/Foto_culto_domingo.png';
+import fotoBemVindos from '../assets/foto_bemvindos.png';
 
 
 const Home: React.FC = () => {
@@ -13,28 +13,25 @@ const Home: React.FC = () => {
     <>    
     <div className={styles.backgroundPage}>
       <section className={styles.banner}>
-      <div style={{ position: 'relative', width: '100%', height: '300px' }}>
-  <Image
-    src={fotoCultoDomingo}
-    alt="Foto do culto de domingo"
-    layout="fill"
-    objectFit="cover"
-  />
-</div>
-        <h1>Seja Bem Vindo(a)!
-          <br /> <br />
-          <span>Primeira Igreja Batista em Teotônio Vilela</span>
-        </h1> <br />
-        <p>CULTO AOS <b>DOMINGO</b> ÀS 18H | <b>TERÇA-FEIRAS</b> ÀS 19H30 </p>
-        <br />
-        <div className={styles.socialIcons}>
-          <p>Nossas redes sociais</p>
-          <a href="https://www.instagram.com/pibteotoniovilela/">📸</a>
-          <a href="#youtube">📺</a>
-        </div>
+      <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+      <Image
+              src={fotoBemVindos}
+              alt="Foto do culto de domingo"
+              fill 
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Ajusta o tamanho para diferentes larguras de tela
+              style={{ objectFit: 'cover' }} // Define o comportamento de preenchimento da imagem
+            />
+  </div>
       </section>
     </div>
-    
+    <section className="info-page1">
+      <h1>Bem-vindos à Primeira Igreja Batista em Teotônio Vilela</h1>
+      <p>Seja bem-vindo ao site da Primeira Igreja Batista em Teotônio Vilela. Aqui você encontra informações sobre nossos cultos, eventos e atividades. Fique à vontade para navegar e conhecer mais sobre a nossa igreja.</p>
+  </section>  
+  <section className="info-page2">
+      <h1>titulo aqui</h1>
+      <p>texto aqui</p>
+  </section>  
     </>
   );  
 };

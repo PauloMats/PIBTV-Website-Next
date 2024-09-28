@@ -11,14 +11,9 @@ body, html {
   box-sizing: border-box;
 }
 
-.backgroundPage {
-  background-color: #f4f4f4;
-}
-
 .banner {
   text-align: center;
   padding: 50px;
-  background-color: #282c34;
   color: white;
 }
 
