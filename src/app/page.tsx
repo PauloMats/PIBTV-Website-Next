@@ -2,24 +2,22 @@
 
 "use client";
 import React from 'react';
-import styles from './Home.module.css';
-import './globals.css';
 import Image from 'next/image';
 import fotoBemVindos from '../assets/foto_bemvindos.png';
+import '../app/Home.module.css';
 
 
 const Home: React.FC = () => {
   return (
     <>    
-    <div className={styles.backgroundPage}>
-      <section className={styles.banner}>
-      <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+    <div>
+      <section>
+      <div className='image-page-container'>
       <Image
               src={fotoBemVindos}
-              alt="Foto do culto de domingo"
-              fill 
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // Ajusta o tamanho para diferentes larguras de tela
-              style={{ objectFit: 'cover' }} // Define o comportamento de preenchimento da imagem
+              alt="Imagem da igreja"
+              style={{ objectFit: 'cover', width: '100%', height: '100%' }} // Estilo inline para garantir comportamento desejado
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
   </div>
       </section>
@@ -29,8 +27,10 @@ const Home: React.FC = () => {
       <p>Seja bem-vindo ao site da Primeira Igreja Batista em Teotônio Vilela. Aqui você encontra informações sobre nossos cultos, eventos e atividades. Fique à vontade para navegar e conhecer mais sobre a nossa igreja.</p>
   </section>  
   <section className="info-page2">
-      <h1>titulo aqui</h1>
-      <p>texto aqui</p>
+      <h1>Culto todos os Domingo!</h1>
+      <p>
+        Nossos cultos são realizados todos os domingos às 18h00. Venha participar conosco e ouvir a Palavra de Deus.
+      </p>
   </section>  
     </>
   );  

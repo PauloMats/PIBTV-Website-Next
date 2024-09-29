@@ -9,21 +9,35 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgb(255, 255, 255);
   text-align: center;
-  position: relative;
+  position: relative;;
 }
 
+.info-page1 {
+  display: flex;
+  align-items: center ;
+}
+.image-page-container {
+  width: 100%;
+  height: 200px; /* Defina a altura desejada */
+  display: block;
+  position: relative; /* Necessário para que a imagem ocupe o tamanho da div */
+}
+
+.image-page-container img {
+  object-fit: cover; /* Ajusta a imagem para cobrir o espaço da div */
+  width: 100%;
+  height: 100%;
+}
 /* Adiciona um overlay para escurecer a imagem e manter a legibilidade */
 .backgroundPage::before {
   content: ""; 
   position: absolute;
-  top: 0;
+  top: 0; 
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.363); /* Mantém o efeito de escurecimento */
-  z-index: 2;
 }
 
 .banner {
