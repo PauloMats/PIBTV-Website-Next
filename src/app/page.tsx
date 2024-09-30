@@ -5,6 +5,7 @@ import React from 'react';
 import Image from 'next/image';
 import fotoBemVindos from '../assets/foto_bemvindos.png';
 import '../app/Home.module.css';
+import Button from 'react-bootstrap/Button';
 
 
 const Home: React.FC = () => {
@@ -22,8 +23,12 @@ const Home: React.FC = () => {
       </section>
     </div>
     <section className="info-page1">
-      <h1>Bem-vindos à Primeira Igreja Batista em Teotônio Vilela</h1>
-      <p>Seja bem-vindo e bem-vinda ao site da Primeira Igreja Batista em Teotônio Vilela. Aqui você encontra informações sobre nossos cultos, eventos e atividades. Fique à vontade para navegar e conhecer mais sobre a nossa igreja.</p>
+      <h1>Uma família!</h1>
+      <p>Seja bem-vindo e bem-vinda a da Primeira Igreja Batista em Teotônio Vilela. 
+        Aqui você encontra informações sobre nossos cultos, eventos e atividades. 
+        Fique à vontade para navegar e conhecer mais sobre a nossa igreja.</p>
+        <Button variant="secondary">Primary</Button>{''}
+      
   </section>  
   <section className="info-page2">
       <h1>Culto todos os Domingo!</h1>

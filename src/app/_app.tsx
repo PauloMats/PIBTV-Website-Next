@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Loading from '../app/components/Loading';
 import './globals.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [loading, setLoading] = useState(false);
