@@ -1,5 +1,39 @@
+.page-celulas{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    margin-top: 5%;
+    padding: 10px;
+    min-height: 100vh;
+}
 
+.description-celula{
+    font-size: 16px;
+    color: #555;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
+.aside1 p {
+    font-size: 16px;
+    color: #555;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    text-align: left;   
+}
+
+.aside2, .aside1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+}
 .container {
     max-width: 100%;
     overflow-y: auto; /* Permite rolagem vertical */
@@ -63,7 +97,16 @@ h1 {
         justify-content: center;
         gap: 20px; /* Espaçamento entre as imagens */
     }
-    
+    .description-celula{
+        font-size: 16px;
+        color: #555;
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px; /* Espaçamento entre as imagens */
+    }
 }
 
 @media (max-width: 480px) {

@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import localimage from '../../assets/Print Street Viwer PIBTV.png'
