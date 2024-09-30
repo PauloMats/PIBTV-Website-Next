@@ -29,6 +29,7 @@ import Accordion from 'react-bootstrap/Accordion';
               <Accordion.Body>
               <div className="container">
               <section className='description-celula'>
+                
                     <div className='aside1'>
                     <Button variant="outline-info">Informações Sobre a Célula</Button>{' '}
                      <p>Célula Huiós</p>

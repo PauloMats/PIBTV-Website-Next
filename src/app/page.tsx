@@ -6,6 +6,7 @@ import Image from 'next/image';
 import fotoBemVindos from '../assets/foto_bemvindos.png';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Card from 'react-bootstrap/Card';
 
 
 const Home: React.FC = () => {
@@ -39,6 +40,32 @@ const Home: React.FC = () => {
       <Button href="/local" variant="primary">Visite-nos!</Button>{' '}
   </section>  
 
+  <h1 className='h1-center'>Onde a PIBTV é relevante</h1>
+
+  <section className='card-section'>
+    
+  <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Projeto ABBASE</Card.Title>
+        <Card.Text>
+          Projeto ABBASE é uma iniciativa da PIBTV que visa atender as necessidades de famílias carentes da região.
+        </Card.Text>
+        <Button variant="primary">Ver Mais</Button>
+      </Card.Body>
+    </Card>
+    <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Body>
+        <Card.Title>Quilo do Amor</Card.Title>
+        <Card.Text>
+          O Quilo do Amor é um projeto social da PIBTV que auxilia famílias carentes através de doação alimentos.
+        </Card.Text>
+        <Button variant="primary">Ver Mais</Button>
+      </Card.Body>
+    </Card>
+
+  </section>
   <section className="info-page3">
       <h1>Conheça nossos eventos!</h1>
       <p>

@@ -11,6 +11,18 @@ body, html {
   box-sizing: border-box;
 }
 
+.card-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.h1-center {
+  text-align: center;
+}
+
 .info-page1, .info-page2, .info-page3, .info-page4, .info-page5, .info-page6{
   display: flex;
   flex-direction: column;
