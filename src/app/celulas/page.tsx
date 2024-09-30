@@ -14,11 +14,13 @@ import image15 from '../../assets/img cel upf 3.jpg';
 import image16 from '../../assets/img cel upf 4.jpg';
 import image17 from '../../assets/img cel upf 5.jpg';
 import './celulas.css'
+import Button from 'react-bootstrap/Button';
 
     const Celulas = () => {
         return (
             <div className="container">
                 <h1>Conheça nossas Células</h1>
+                <Button variant="outline-info">Info</Button>{' '}
                 <br />
                 <p>Célula Huiós</p>
                 <div className="image-gallery-1">    
