@@ -22,7 +22,7 @@ export default function NavBar() {
 
   return (
     <nav className="navbar">
-      <div className="div01">
+      <div className="div01"> 
         <div className="div02">
           {/* Ajustando o tamanho da imagem */}
           <Image 
