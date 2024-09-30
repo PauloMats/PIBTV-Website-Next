@@ -31,9 +31,12 @@ const Home: React.FC = () => {
   <section className="info-page2">
       <h1>Culto todos os Domingo!</h1>
       <p>
-        Nossos cultos são realizados todos os domingos às 18h00. Venha participar conosco e ouvir a Palavra de Deus.
+        Nossos cultos são realizados todos os domingos às 18h00. E encontros de célula todas as Quintas às 19h45.
+        <br /> Venha participar conosco e ouvir a Palavra de Deus.
+
+        Somos uma igreja em CÉLULAS, e prezamos pela comunhão e pelo ensino da Palavra de Deus.
       </p>
-      <Button href="/local" variant="outline-info">Visite-nos!</Button>{' '}
+      <Button href="/local" variant="primary">Visite-nos!</Button>{' '}
   </section>  
 
   <section className="info-page3">
@@ -41,6 +44,7 @@ const Home: React.FC = () => {
       <p>
         Acompanhe a nossa programação de eventos e participe conosco. 
       </p>
+      <Button href="/eventos" variant="primary">Eventos e Avisos</Button>{' '}
   </section>
 
   <section className="info-page4">
@@ -48,7 +52,7 @@ const Home: React.FC = () => {
       <p>
         Participe de nossas células e faça parte de uma comunidade de fé.
       </p>
-
+      <Button href="/celulas" variant="primary">Células</Button>{' '}
   </section>
 
   <section className="info-page5">
