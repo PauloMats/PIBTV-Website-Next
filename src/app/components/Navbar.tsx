@@ -29,6 +29,7 @@ export default function NavBar() {
             src={logopibtv} 
             alt="PIBTV" 
             className="navbar-logo"
+            priority={true}
           />
         </div>
         <div className={`div03 ${menuOpen ? 'open' : ''}`}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './sobrenos.css';
 
-const InfoPage: React.FC = () => {
+const InfoPage = () => {
     return (
         <div className='container'>
             <h1>Mais sobre a PIBTV</h1>
