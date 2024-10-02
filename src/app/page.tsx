@@ -45,7 +45,7 @@ const Home: React.FC = () => {
   <section className='card-section'>
     
   <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src="" />
       <Card.Body>
         <Card.Title>Projeto ABBASE</Card.Title>
         <Card.Text>
@@ -55,7 +55,7 @@ const Home: React.FC = () => {
       </Card.Body>
     </Card>
     <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="holder.js/100px180" />
+      <Card.Img variant="top" src="" />
       <Card.Body>
         <Card.Title>Quilo do Amor</Card.Title>
         <Card.Text>

@@ -1,7 +1,7 @@
 "use client";
 
+import './celulas.css'
 import React from 'react';
-import Image from 'next/image';
 import image4 from '../../assets/img cel huios 1.jpg';
 import image5 from '../../assets/img cel huios 2.jpg';
 import image6 from '../../assets/img cel huios 3.jpg';
@@ -15,9 +15,9 @@ import image14 from '../../assets/img cel upf 2.jpg';
 import image15 from '../../assets/img cel upf 3.jpg';
 import image16 from '../../assets/img cel upf 4.jpg';
 import image17 from '../../assets/img cel upf 5.jpg';
-import './celulas.css'
 import Button from 'react-bootstrap/Button';
 import Accordion from 'react-bootstrap/Accordion';
+import Image from 'next/image';
 
     const Celulas = () => {
         return (
