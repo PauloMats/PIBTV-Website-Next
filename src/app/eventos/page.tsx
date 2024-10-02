@@ -9,7 +9,6 @@ const Page: React.FC = () => {
                 - Local ...
                 Em breve mais informações.
             </p>
-            <img src="/path/to/image.jpg" alt="Image" />
         </div>
     );
 };
