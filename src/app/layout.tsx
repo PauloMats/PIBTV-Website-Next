@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import NavBar from "./components/Navbar";
