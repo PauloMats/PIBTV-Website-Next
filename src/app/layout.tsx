@@ -6,6 +6,7 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 import NavBar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NavBar />
         {children}</body>
+        <Footer />
     </html>
   );
 }
