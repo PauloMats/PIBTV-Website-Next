@@ -10,6 +10,7 @@ import './midiapibtv.css';
 const Page: React.FC = () => {
     return (
         <div className='container'>
+            <br /><br /><br /> <br />
             <section className='page_midiapibtv'>
                 <div>   
                     <h1>Fotos e Vídeos de nossa Igreja</h1>

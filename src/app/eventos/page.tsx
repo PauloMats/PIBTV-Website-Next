@@ -5,6 +5,7 @@ const Page: React.FC = () => {
     return (
         <>
         <div className='container'>
+            <br /><br /><br /> <br />
             <h1>Eventos e Avisos</h1>
             <p> - Dia ... 
                 - Horário ...
@@ -13,7 +14,6 @@ const Page: React.FC = () => {
             </p>
             
         </div>
-        <Footer />
         </>
     );
 };
