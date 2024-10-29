@@ -105,7 +105,8 @@ const Home: React.FC = () => {
 <section className="info-page5">
   <h1>Conheça nossos ministérios!</h1>
   <p>Conheça os ministérios da PIBTV e participe conosco.</p>
-</section>  
+  <Button href="/ministerios" variant="primary">Ministérios</Button>
+</section>    
 
       <Form>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

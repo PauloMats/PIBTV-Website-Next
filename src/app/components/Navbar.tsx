@@ -52,6 +52,9 @@ export default function NavBar() {
             <li>
               <Link href="/celulas" className="nav-link" onClick={closeMenu}>Células</Link>
             </li>
+            <li>
+              <Link href="/ministerios" className="nav-link" onClick={closeMenu}>Ministérios</Link>
+            </li>
           </ul>
         </div>
         <div className="menu">
