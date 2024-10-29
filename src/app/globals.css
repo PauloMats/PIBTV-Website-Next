@@ -11,6 +11,38 @@ body, html {
   box-sizing: border-box;
 }
 
+.carousel-cards {
+  display: none; /* Escondendo o carrossel em telas grandes */
+}
+
+.card-section {
+  display: flex; /* Exibindo os cards normalmente sem carrossel */
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.card {
+  flex: 1 1 30%; /* Distribuindo os cards uniformemente em telas grandes */
+  max-width: 300px; /* Tamanho máximo de cada card */
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black; /* Cor de fundo do círculo */
+  border-radius: 50%; /* Deixa o fundo arredondado */
+  color: white; /* Cor das setas */
+  width: 40px; /* Largura do círculo */
+  height: 40px; /* Altura do círculo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 30%; /* Ajusta o tamanho das setas */
+  padding: 5px; /* Espessura do espaço interno */
+}
+
+
 .carousel-caption {
   position: sticky;
   justify-content: center;
@@ -43,7 +75,7 @@ body, html {
   text-align: center;
 }
 
-.info-page1, .info-page2, .info-page3, .info-page4, .info-page5, .info-page6{
+.info-page1, .info-page2, .info-page3, .info-page4, .info-page5, .info-page6, .page-infos{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -110,4 +142,26 @@ p {
 .serviceItem p {
   font-size: 16px;
   color: #555;
+}
+
+/* Ajustes para telas pequenas (mobile) */
+@media (max-width: 768px) {
+  .card-mobile {
+    display: block; /* Ativando o carrossel no mobile */
+  }
+
+  .card-section { 
+    display: none; /* Escondendo a seção de cards sem carrossel no mobile */
+  }
+}
+
+/* Ajustes para telas grandes */
+@media (min-width: 768px) {
+  .card-mobile {
+    display: none; /* Escondendo o carrossel em telas grandes */
+  }
+
+  .card-section {
+    display: flex; /* Exibindo cards em telas grandes */
+  }
 }

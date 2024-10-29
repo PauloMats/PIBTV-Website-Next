@@ -6,8 +6,8 @@ import Image from 'next/image';
 import fotoBemVindos from '../assets/foto_bemvindos.png';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Card from 'react-bootstrap/Card';
 import CaroucelExemple from './components/Carrousel';
+import { Card } from 'react-bootstrap';
 
 
 const Home: React.FC = () => {
@@ -44,39 +44,68 @@ const Home: React.FC = () => {
 
   <h1 className='h1-center'>Onde a PIBTV é relevante</h1>
 
-  <section className='card-section'>
+  <section className='card-mobile'>
 
-  </section>
+  {/* Carrossel para mobile */}
   <CaroucelExemple />
-  <section className="info-page3">
-      <h1>Conheça nossos eventos!</h1>
-      <p>
-        Acompanhe a nossa programação de eventos e participe conosco. 
-      </p>
-      <Button href="/eventos" variant="primary">Eventos e Avisos</Button>{' '}
-  </section>
+ </section>
 
-  <section className="info-page4">
-      <h1>Conheça nossas células!</h1>
-      <p>
-        Participe de nossas células e faça parte de uma comunidade de fé.
-      </p>
-      <Button href="/celulas" variant="primary">Células</Button>{' '}
-  </section>
+{/* Cards para telas grandes */}
+<section className='card-section'>
 
-  <section className="info-page5">
-      <h1>Conheça nossos ministérios!</h1>
-      <p>
-        Conheça os ministérios da PIBTV e participe conosco.
-      </p>
+  <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="" />
+      <Card.Body>
+        <Card.Title>Quilo do Amor</Card.Title>
+        <Card.Text>
+          O Quilo do Amor é um projeto social da PIBTV que auxilia famílias carentes através de doação alimentos.
+        </Card.Text>
+        <Button variant="primary">Ver Mais</Button>
+      </Card.Body>
+    </Card>
 
-  </section>  
+  <Card style={{ width: '18rem' }}>
+      <Card.Img variant="top" src="" />
+      <Card.Body>
+        <Card.Title>Células</Card.Title>
+        <Card.Text>
+          As células são grupos de estudo e comunhão que se reúnem semanalmente para estudar e compartilhar a Palavra de Deus.
+        </Card.Text>
+        <Button variant="primary">Ver Mais</Button>
+      </Card.Body>
+    </Card>
+  
+ 
+  <Card style={{ width: '18rem'}}>
+      <Card.Img variant="top" src="" />
+      <Card.Body>
+        <Card.Title>Projeto ABBASE</Card.Title>
+        <Card.Text>
+          Projeto ABBASE é uma iniciativa da PIBTV que visa atender as necessidades de famílias carentes da região.
+        </Card.Text>  
+        <Button variant="primary">Ver Mais</Button>
+      </Card.Body>
+    </Card>
 
-  <section className="info-page6">
-      <h1>Pedidos de Oração</h1>
-      <p>
-        Deixe o seu pedido de oração conosco.
-      </p>
+</section>
+
+<section className='page-infos'>
+<section className="info-page3">
+  <h1>Conheça nossos eventos!</h1>
+  <p>Acompanhe a nossa programação de eventos e participe conosco.</p>
+  <Button href="/eventos" variant="primary">Eventos e Avisos</Button>
+</section>
+
+<section className="info-page4">
+  <h1>Conheça nossas células!</h1>
+  <p>Participe de nossas células e faça parte de uma comunidade de fé.</p>
+  <Button href="/celulas" variant="primary">Células</Button>
+</section>
+
+<section className="info-page5">
+  <h1>Conheça nossos ministérios!</h1>
+  <p>Conheça os ministérios da PIBTV e participe conosco.</p>
+</section>  
 
       <Form>
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">

@@ -13,7 +13,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "PIBTV - Web Site",
   description: "Primeira Igreja Batista Teotônio Vilela",
-};
+};  
 
 export default function RootLayout({
   children,
