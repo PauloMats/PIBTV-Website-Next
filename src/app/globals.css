@@ -1,26 +1,51 @@
 /* src/app/globals.css */
 
 body, html {
-  background-color: rgb(255, 255, 255);
-  background-size: 100%;
+  background-color: #f8f9fa; /* Cor de fundo mais suave */
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif; /* Mudança de fonte para uma mais moderna */
   box-sizing: border-box;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden; /* Para evitar overflow da imagem */
+}
+
+.image-page {
+  width: 100%;
+  height: auto; /* Ajusta a altura automaticamente */
+  display: block;
+  border-radius: 15px; /* Bordas arredondadas na imagem */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra sutil */
 }
 
 .carousel-cards {
   display: none; /* Escondendo o carrossel em telas grandes */
 }
 
-.card-section {
-  display: flex; /* Exibindo os cards normalmente sem carrossel */
-  flex-wrap: wrap;
-  justify-content: space-around;
-  gap: 20px;
+
+.custom-card {
+  transition: transform 0.3s; /* Adiciona efeito de transição */
 }
+
+.custom-card:hover {
+  transform: scale(1.05); /* Aumenta levemente o card ao passar o mouse */
+}
+
+.h1-center {
+  text-align: center;
+  margin: 20px 0; /* Espaçamento */
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+  margin: 10px 0; /* Margem reduzida */
+} 
 
 .card {
   flex: 1 1 30%; /* Distribuindo os cards uniformemente em telas grandes */
@@ -64,22 +89,23 @@ body, html {
 }
 
 .card-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* Exibindo os cards normalmente sem carrossel */
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza os cards */
   gap: 20px;
-  padding: 20px;
+  padding: 20px; /* Espaçamento interno */
 }
 
 .h1-center {
   text-align: center;
 }
 
-.info-page1, .info-page2, .info-page3, .info-page4, .info-page5, .info-page6, .page-infos{
+
+.info-page1, .info-page2, .info-page3, .info-page4, .info-page5, .page-infos {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center; /* Centraliza o texto */
   padding: 20px;
 }
 
@@ -97,12 +123,17 @@ p {
   margin-right: 10%;
 }	
 
-.footer-page {
-  background-color: #000000;
-  color: #ffffff;
+
+footer{
+  background-color: #343a40; /* Cor de fundo mais escura */
+  color: white;
   text-align: center;
   padding: 20px;
   font-weight: 500;
+}
+
+.p-footer{
+  color: whitesmoke;
 }
 
 .banner {
