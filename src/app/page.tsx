@@ -77,7 +77,7 @@ const Home: React.FC = () => {
         ].map((info, index) => (
           <section key={index} className={`info-page${index + 3}`}>
             <h1>{info.title}</h1>
-            <p>{info.description}</p>
+            <p>{info.description}</p> 
             <Button href={info.link} variant="primary">{info.title.split(" ")[2]}</Button>
           </section>
         ))}
