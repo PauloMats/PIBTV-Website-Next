@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import Image from 'next/image';
-import fotoBemVindos from '../assets/foto_bemvindos.png';
+import fotoBemVindos from '../assets/Bem-vindo-img.png';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Footer from './components/Footer';
@@ -13,15 +13,12 @@ const Home: React.FC = () => {
     <>    
       <div>
         <section className="hero-section">
-          <div className='image-page-container'>
-            <Image
-              className="image-page"
-              src={fotoBemVindos}
-              alt="Imagem da igreja"
-              priority // Adicionando prioridade para a imagem
-              sizes="(max-width: 768px) 100vw, (min-width: 769px) 70vw" // Responsividade
-            />
+          <div className='image-hero'>
+            <h1>Bem vindo a PIBTV</h1>
+            <p>Primeira Igreja Batista em Teotônio Vilela</p>
           </div>
+            
+         
         </section>
       </div>
       
