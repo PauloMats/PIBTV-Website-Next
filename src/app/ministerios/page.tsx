@@ -1,51 +1,61 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from 'next/image';
-import image1 from '../../assets/img ministerio infantil.jpg';
-import image2 from '../../assets/img ministerio louvor.jpg';
-import image3 from '../../assets/img ministerio multimidia.jpg';
-import image4 from '../../assets/img ministerio recepção.jpg';
-import './ministerios.css';
+import Image from "next/image";
+import Link from "next/link";
+import { PageHero } from "@/components/site/page-hero";
+import { ministryHighlights } from "@/data/site-content";
 
-const MinisteriosPage: React.FC = () => {
-    const cards = [
-        {
-            title: 'Ministério Infantil',
-            image: image1,    
-            description: 'O Ministério Infantil é responsável por cuidar das crianças da igreja.',
-        },
-        {
-            title: 'Ministério de Louvor',
-            image: image2,
-            description: 'O Ministério de Louvor é responsável por conduzir a igreja na adoração.',
-        },
-        {
-            title: 'Ministério de Multimídia',
-            image: image3,
-            description: 'O Ministério de Multimídia é responsável por cuidar da parte técnica dos cultos, como som e projeção e iluminação.',
-        },
-        {   
-            title: 'Ministério de Recepção',
-            image: image4,
-            description: 'O Ministério de Recepção é responsável por receber os visitantes e membros da igreja.',
-        },
-    ];
+export default function MinisteriosPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Ministérios"
+        title="Áreas de serviço que sustentam a vida da igreja"
+        description="Cada ministério serve a igreja de forma prática, fortalecendo o culto, a comunhão, a recepção de visitantes e o cuidado com pessoas."
+      />
 
-    return (
-        <div className="container mt-5">    
-            <div className="cards-colum">
-                {cards.map((card, index) => (
-                    <div className="col-md-3" key={index}>
-                            <Image src={card.image} className="card-img-top" alt={card.title} layout="responsive" />
-                            <div className="card-body">
-                                <h5 className="card-title">{card.title}</h5>
-                                <p className="card-text">{card.description}</p>
-                            </div>
-                        </div>
-                ))}
-            </div>
+      <section className="mx-auto max-w-6xl px-6 py-16 md:px-10">
+        <div className="grid gap-5 md:grid-cols-2">
+          {ministryHighlights.map((item) => (
+            <article
+              key={item.title}
+              className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]"
+            >
+              <div className="relative h-72">
+                <Image src={item.image} alt={item.title} fill className="object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              </div>
+              <div className="p-6">
+                <p className="text-xs uppercase tracking-[0.18em] text-brand-red">
+                  {item.emphasis}
+                </p>
+                <h2 className="mt-3 text-2xl font-semibold text-white">{item.title}</h2>
+                <p className="mt-4 text-sm leading-7 text-slate-400">
+                  {item.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
-    );
-};
 
-export default MinisteriosPage;
+        <div className="mt-12 rounded-[2rem] border border-white/10 bg-black/20 p-6 md:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-red">
+            Caminho de serviço
+          </p>
+          <h2 className="mt-4 font-display text-4xl uppercase tracking-[0.08em] text-white">
+            Há espaço para servir com dons, tempo e disposição
+          </h2>
+          <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-400">
+            Se você deseja conhecer melhor uma área de atuação da igreja, participe dos cultos, converse com a liderança e descubra como caminhar e servir junto com a comunidade.
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/contato"
+              className="rounded-full bg-brand-red px-6 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white"
+            >
+              Falar com a igreja
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}

@@ -1,256 +1,167 @@
-/* src/app/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body, html {
-  background-color: #EDECF6; /* Cor de fundo mais suave */
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  font-family: 'Roboto', sans-serif; /* Mudança de fonte para uma mais moderna */
+:root {
+  color-scheme: dark;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 26px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes gentle-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: translate3d(0, -8px, 0);
+  }
+}
+
+* {
   box-sizing: border-box;
 }
 
-.image-hero{
-  background-image: url("/assets/Bem-vindo-img.jpg"); /* Ajuste o caminho da imagem aqui */
-  background-size: cover; /* Cobre todo o container */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita repetição */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  text-align: center;
-  padding: 100px;
-  color: #fff; /* Cor branca para contrastar com o fundo */
+html {
+  scroll-behavior: smooth;
 }
 
-.image-hero h1{
-  color: #fff;
-  font-weight: 700;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(151, 7, 7, 0.18), transparent 35%),
+    linear-gradient(180deg, #0a0e16 0%, #05070b 100%);
+  color: #f8fafc;
+  font-family: var(--font-montserrat), sans-serif;
+  overflow-x: hidden;
 }
 
-.image-hero p{
-  color: #fff;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}	
-
-.hero-section {
-  position: relative;
-  overflow: hidden; /* Para evitar overflow da imagem */
-  background-color: #f8f9fa;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.image-page {
-  width: 50%;
-  height: auto; /* Ajusta a altura automaticamente */
-  display: block;
-  margin-left: 15%;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.carousel-cards {
-  display: none; /* Escondendo o carrossel em telas grandes */
-}
-
-
-.custom-card {
-  transition: transform 0.3s; /* Adiciona efeito de transição */
-}
-
-.custom-card:hover {
-  transform: scale(1.05); /* Aumenta levemente o card ao passar o mouse */
-}
-
-.h1-center {
-  text-align: center;
-  margin: 20px 0; /* Espaçamento */
-}
-
-p {
-  font-size: 16px;
-  color: #555;
-  margin: 10px 0; /* Margem reduzida */
-} 
-
-.card {
-  flex: 1 1 30%; /* Distribuindo os cards uniformemente em telas grandes */
-  max-width: 300px; /* Tamanho máximo de cada card */
-}
-
-.info-page2 {
-  background-image: url("/assets/fundo.adoração.jpg"); /* Ajuste o caminho da imagem aqui */
-  background-size: cover; /* Cobre todo o container */
-  background-position: center; /* Centraliza a imagem */
-  background-repeat: no-repeat; /* Evita repetição */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 50px;
-  color: #fff; /* Cor branca para contrastar com o fundo */
-}
-
-.info-page2 p{
+::selection {
+  background: rgba(151, 7, 7, 0.6);
   color: #fff;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-color: black; /* Cor de fundo do círculo */
-  border-radius: 50%; /* Deixa o fundo arredondado */
-  color: white; /* Cor das setas */
-  width: 40px; /* Largura do círculo */
-  height: 40px; /* Altura do círculo */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-size: 30%; /* Ajusta o tamanho das setas */
-  padding: 5px; /* Espessura do espaço interno */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
 }
 
-
-.carousel-caption {
-  position: sticky;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  margin-left: 10%;
-  padding: 5%; 
-  width: auto;
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
 }
 
-.carousel-control-next-icon, .carousel-control-prev-icon {
-  display: inline-block;
-  width: 2rem;
-  height: 2rem;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: 100% 100%;
-  color: #000;
+::-webkit-scrollbar-thumb {
+  background: rgba(151, 7, 7, 0.6);
+  border-radius: 999px;
 }
 
-.card-section {
-  display: flex; /* Exibindo os cards normalmente sem carrossel */
-  flex-wrap: wrap;
-  justify-content: center; /* Centraliza os cards */
-  gap: 20px;
-  padding: 20px; /* Espaçamento interno */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(151, 7, 7, 0.85);
 }
 
-.h1-center {
-  text-align: center;
+.reveal-up {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.page-infos{
-  background-image: url("/assets/fundo-section50-w.jpg");
-  background-size: cover;
+.reveal-fade {
+  animation: fade-in 0.8s ease both;
 }
 
-.info-page1, .info-page3, .info-page4, .info-page5, .page-infos {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center; /* Centraliza o texto */
-  padding: 20px;
+.stagger-grid > * {
+  opacity: 0;
+  animation: fade-up 0.85s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.image-page{
-  width: 75%;
-  align-items: center;
+.stagger-grid > *:nth-child(1) {
+  animation-delay: 0.04s;
 }
 
-p {
-  font-size: 16px;
-  color: #555;
-  margin-left: 10%;
-  margin-right: 10%;
-}	
-
-
-footer{
-  background-color: #343a40; /* Cor de fundo mais escura */
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-weight: 500;
+.stagger-grid > *:nth-child(2) {
+  animation-delay: 0.1s;
 }
 
-.p-footer{
-  color: whitesmoke;
+.stagger-grid > *:nth-child(3) {
+  animation-delay: 0.16s;
 }
 
-.banner {
-  text-align: center;
-  padding: 50px;
-  color: white;
+.stagger-grid > *:nth-child(4) {
+  animation-delay: 0.22s;
 }
 
-.socialIcons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+.stagger-grid > *:nth-child(5) {
+  animation-delay: 0.28s;
 }
 
-.services {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px;
-  background-color: #ffffff;
+.stagger-grid > *:nth-child(6) {
+  animation-delay: 0.34s;
 }
 
-.serviceItem {
-  text-align: center;
-  max-width: 300px;
+.card-lift {
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease,
+    background-color 240ms ease;
 }
 
-.serviceItem i {
-  font-size: 50px;
-  margin-bottom: 20px;
+.card-lift:hover {
+  transform: translate3d(0, -6px, 0);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.28);
 }
 
-.serviceItem h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.soft-float {
+  animation: gentle-float 8s ease-in-out infinite;
 }
 
-.serviceItem p {
-  font-size: 16px;
-  color: #555;
+.soft-panel {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 24px 60px rgba(0, 0, 0, 0.24);
 }
 
-/* Ajustes para telas pequenas (mobile) */
-@media (max-width: 768px) {
-  .card-mobile {
-    display: block; /* Ativando o carrossel no mobile */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  .card-section { 
-    display: none; /* Escondendo a seção de cards sem carrossel no mobile */
-  }
-
-  .image-hero {
-    padding: 50px; /* Diminuindo o espaçamento */
-  } 
-
-  .image-hero p{
-    font-size: 12px; /* Diminuindo o tamanho da fonte */
-    padding: 10px;
-  }
-
-  .info-page2 {
-    padding: 20px; /* Diminuindo o espaçamento */
-  }
-}
-
-
-
-/* Ajustes para telas grandes */
-@media (min-width: 768px) {
-  .card-mobile {
-    display: none; /* Escondendo o carrossel em telas grandes */
-  }
-
-  .card-section {
-    display: flex; /* Exibindo cards em telas grandes */
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

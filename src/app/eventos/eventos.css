@@ -1,6 +1,0 @@
-.container {
-    max-width: 100%;
-    overflow-y: auto; /* Permite rolagem vertical */
-    background-color: #f0f0f0; /* Fundo cinza claro para toda a página */
-    min-height: 100vh; /* Garante que o contêiner ocupe a altura total da tela */
-}

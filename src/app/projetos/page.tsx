@@ -1,39 +1,45 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Image from 'next/image';
-import image1 from '../../assets/abase Project.png';
-import image2 from '../../assets/quilo do amor.jpg';
-import './projetos.css';
+import Image from "next/image";
+import { PageHero } from "@/components/site/page-hero";
+import { churchProjects } from "@/data/site-content";
 
-const MinisteriosPage: React.FC = () => {
-    const cards = [
-        {
-            title: 'Projeto ABASE',
-            image: image1,    
-            description: 'O Projeto ABASE é responsável por cuidar de crianças e adolescentes em situação de vulnerabilidade social.',
-        },
-        {
-            title: 'Quilo do Amor',
-            image: image2,
-            description: 'O Quilo do Amor é uma ação social que visa arrecadar alimentos para famílias carentes.',
-        },
-    ];
+export default function ProjetosPage() {
+  return (
+    <>
+      <PageHero
+        eyebrow="Projetos sociais"
+        title="A presença da igreja também alcança a cidade"
+        description="Além dos encontros e do cuidado interno, vale destacar ações sociais e projetos que comunicam serviço, compaixão e compromisso com a comunidade."
+      />
 
-    return (
-        <div className="container mt-5">    
-            <div className="cards-colum">
-                {cards.map((card, index) => (
-                    <div className="col-md-3" key={index}>
-                            <Image src={card.image} className="card-img-top" alt={card.title} layout="responsive" />
-                            <div className="card-body">
-                                <h5 className="card-title">{card.title}</h5>
-                                <p className="card-text">{card.description}</p>
-                            </div>
-                        </div>
-                ))}
-            </div>
+      <section className="mx-auto max-w-6xl px-6 py-16 md:px-10">
+        <div className="grid gap-6 lg:grid-cols-2">
+          {churchProjects.map((project) => (
+            <article
+              key={project.title}
+              className="overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.03]"
+            >
+              <div className="relative h-80">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              </div>
+              <div className="p-6 md:p-8">
+                <p className="text-xs uppercase tracking-[0.18em] text-brand-red">
+                  {project.impact}
+                </p>
+                <h2 className="mt-3 text-3xl font-semibold text-white">{project.title}</h2>
+                <p className="mt-4 text-sm leading-7 text-slate-400">
+                  {project.description}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
-    );
-};
-
-export default MinisteriosPage;
+      </section>
+    </>
+  );
+}

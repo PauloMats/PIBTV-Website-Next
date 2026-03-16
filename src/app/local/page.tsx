@@ -1,28 +1,104 @@
-"use client";
+import Image from "next/image";
+import Link from "next/link";
+import { Mail, MapPinned, MessageSquareMore } from "lucide-react";
+import { PageHero } from "@/components/site/page-hero";
+import { getPublicSiteSnapshot } from "@/lib/site-api";
 
-import React from 'react';
-import Image from 'next/image';
-import localimage from '../../assets/Print Street Viwer PIBTV.png';
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa'; // Importando ícones
-import './local.css';
+export default async function LocalPage() {
+  const site = await getPublicSiteSnapshot();
 
-const Page = () => {
-    return (
-        <div className='container'>
-            <h1>Faça-nos uma Visita!</h1>
-            <h3>Será uma alegria imensa te receber!</h3>
-            <div className='location-info'>
-                <FaMapMarkerAlt className='icon' />
-                <p>Estamos situados na Av. Maria Jeane Moreira Sampaio, S/N. Teotônio Vilela, AL</p>
-                <a href="https://maps.app.goo.gl/QW8paEocsWxE2QXo8" target="_blank" rel="noopener noreferrer" className='map-link'>Ver no Google Maps</a>
+  return (
+    <>
+      <PageHero
+        eyebrow="Faça uma visita"
+        title="Informações claras para chegar, participar e falar com a igreja"
+        description="Queremos tornar sua chegada mais tranquila com endereço, horários e canais de contato apresentados de forma simples e acolhedora."
+      />
+
+      <section className="mx-auto grid max-w-6xl gap-8 px-6 py-16 md:px-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="space-y-6">
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 md:p-8">
+            <div className="flex items-start gap-3">
+              <MapPinned className="mt-1 h-5 w-5 text-brand-red" />
+              <div>
+                <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-red">
+                  Endereço
+                </p>
+                <p className="mt-3 text-lg leading-8 text-slate-200">
+                  {site.identity.address}
+                </p>
+                <Link
+                  href={site.identity.mapsUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-5 inline-flex rounded-full bg-brand-red px-5 py-3 text-sm font-semibold uppercase tracking-[0.14em] text-white"
+                >
+                  Ver no Google Maps
+                </Link>
+              </div>
             </div>
-            <Image className='image' src={localimage} alt="Image" />
+          </div>
 
-            <h4>Dúvidas?</h4>
-            <p>Veja abaixo como chegar ao nosso endereço facilmente pelo google maps!</p>
-            <iframe className='google-maps' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d491.2873813094692!2d-36.35078653181511!3d-9.909032278713363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x70425000eba772f%3A0xbd20dae624f98bcd!2sPrimeira%20Igreja%20Batista%20de%20Teot%C3%B4nio%20Vilela!5e0!3m2!1spt-BR!2sbr!4v1720546595672!5m2!1spt-BR!2sbr" width="600" height="450" style={{ border: '0' }} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+          <div className="grid gap-4 md:grid-cols-2">
+            <Link
+              href={`mailto:${site.identity.email}`}
+              className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5 transition hover:border-white/20"
+            >
+              <Mail className="h-5 w-5 text-brand-red" />
+              <h2 className="mt-4 text-lg font-semibold text-white">E-mail</h2>
+              <p className="mt-2 text-sm text-slate-400">{site.identity.email}</p>
+            </Link>
+            <Link
+              href={site.identity.whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-[1.5rem] border border-white/10 bg-white/[0.03] p-5 transition hover:border-white/20"
+            >
+              <MessageSquareMore className="h-5 w-5 text-brand-red" />
+              <h2 className="mt-4 text-lg font-semibold text-white">Secretaria</h2>
+              <p className="mt-2 text-sm text-slate-400">
+                Canal rápido para dúvidas, primeira visita e informações da rotina da igreja.
+              </p>
+            </Link>
+          </div>
+
+          <div className="rounded-[2rem] border border-white/10 bg-white/[0.03] p-6 md:p-8">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-red">
+              Horários principais
+            </p>
+            <div className="mt-5 space-y-3">
+              {site.serviceSchedule.map((item) => (
+                <div
+                  key={`${item.day}-${item.time}`}
+                  className="flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-black/20 px-4 py-4"
+                >
+                  <div>
+                    <p className="text-sm font-semibold text-white">{item.title}</p>
+                    <p className="text-xs uppercase tracking-[0.16em] text-slate-500">
+                      {item.day}
+                    </p>
+                  </div>
+                  <div className="font-display text-3xl uppercase tracking-[0.08em] text-white">
+                    {item.time}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-    );
-};
 
-export default Page;
+        <div className="overflow-hidden rounded-[2rem] border border-white/10">
+          <div className="relative min-h-[280px] md:min-h-[420px]">
+            <Image
+              src={site.identity.locationImage}
+              alt="Street view da localização da PIBTV"
+              fill
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
